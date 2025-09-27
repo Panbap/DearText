@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lovely – nơi chia sẻ yêu thương." />
+  <!-- <meta name="robots" content="index, follow"> -->
+  <title>Nhập dữ liệu</title>
+  <link rel="icon" href="https://github.com/Panbap/anh/blob/main/icon1.png?raw=true" type="image/png" />
+  <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@700&display=swap" rel="stylesheet" />
+  <!-- <link rel="canonical" href="https://lovely.vn"> -->
+  <style></style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Nhập Dữ Liệu</h1>
+    <form id="dataForm">
+      <label>Thông điệp:</label>
+      <div id="messageContainer" style="width: 100%;"></div>
+      <div id="errorMessage"></div>
+      <button type="button" class="add-line-btn" onclick="addMessageInput()">Thêm thông điệp</button>
+
+      <label for="music">Chọn nhạc:</label>
+      <select id="music" name="music" required>
+        <option value="" disabled selected>-- Chọn nhạc --</option>
+        <option value="a.mp3">Nhac nền</option>
+        <option value="s.mp3">Happy birthday</option>
+        <option value="e.mp3">Lễ đường</option>
+        <option value="t.mp3">Từng Ngày Yêu Em</option>
+        <option value="c.mp3">Chạm vào mây</option>
+      </select>
+
+      <button type="submit">Tạo Link</button>
+    </form>
+
+    <div id="linkContainer">
+      <button id="copyBtn" title="Copy link này">Copy</button>
+      <input type="text" id="linkInput" readonly />
+    </div>
+  </div>
+
+  <script>
+    const _0x22dea5 = _0x5012; !function (n, e) { const o = _0x5012, t = _0x5596(); for (; ;)try { if (673887 === -parseInt(o(475)) / 1 * (-parseInt(o(486)) / 2) + parseInt(o(462)) / 3 * (parseInt(o(456)) / 4) + parseInt(o(485)) / 5 * (parseInt(o(474)) / 6) + -parseInt(o(479)) / 7 + parseInt(o(455)) / 8 + parseInt(o(470)) / 9 + -parseInt(o(481)) / 10) break; t.push(t.shift()) } catch (n) { t.push(t.shift()) } }(); const style = document[_0x22dea5(457)](_0x22dea5(483)); function _0x5596() { const n = ["223515inRHJw", "script", '\n                    <h1 style="color:red; font-size: 28px; text-align: center; margin-top: 100px;"> 🚨 Đang mở DevTools!</h1>\n                    <h1 style="color:red; font-size: 24px; text-align: center;">Nhấn F12 để đóng.</h1>', "now", "appendChild", "ctrlKey", "key", "shiftKey", "1148472MtppFH", "body", "body {\n      font-family: 'Playpen Sans', cursive;\n      background-color: #ffc9c9;\n      margin: 0;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      padding: 20px;\n    }\n\n    .container {\n      background: #fff;\n      border-radius: 12px;\n      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);\n      padding: 30px 40px;\n      box-sizing: border-box;\n      display: flex;\n      flex-direction: column;\n      gap: 20px;\n      width: 600px;\n    }\n\n    h1 {\n      margin: 0 0 10px 0;\n      font-weight: 600;\n      color: #ff6565;\n      text-align: center;\n      user-select: none;\n    }\n\n    form {\n      display: flex;\n      flex-direction: column;\n      gap: 18px;\n    }\n\n    label {\n      font-weight: 500;\n      font-size: 14px;\n      color: #555;\n      user-select: none;\n    }\n\n    .message-wrapper input {\n      border: none;\n      border-bottom: 2px solid #ccc;\n      background: transparent;\n      font-size: 16px;\n      padding: 10px 4px;\n      width: 100%;\n      font-family: 'Playpen Sans', cursive;\n      transition: border-color 0.3s ease;\n      text-align: center;\n    }\n\n    .message-wrapper input:focus {\n      outline: none;\n      border-bottom: 2px solid #ff6565;\n    }\n\n    .message-wrapper {\n      display: flex;\n      align-items: center;\n      gap: 10px;\n      margin-bottom: 10px;\n    }\n\n    .message-wrapper button {\n      background-color: #ff6565;\n      color: white;\n      border: none;\n      border-radius: 6px;\n      padding: 8px 14px;\n      cursor: pointer;\n\n    }\n\n    #errorMessage {\n      color: red;\n      font-size: 14px;\n      margin-top: -8px;\n      margin-bottom: 10px;\n      text-align: center;\n    }\n\n    select,\n    button {\n      font-family: 'Playpen Sans', cursive;\n      padding: 12px 15px;\n      font-size: 16px;\n      border-radius: 8px;\n      border: 1.8px solid #ddd;\n      transition: border-color 0.3s ease;\n      cursor: pointer;\n    }\n\n    select:focus {\n      outline: none;\n      border-color: #ff6565;\n      box-shadow: 0 0 8px rgba(238, 102, 166, 0.3);\n    }\n\n    button.add-line-btn {\n      font-family: 'Playpen Sans', cursive;\n      padding: 10px 18px;\n      background-color: #ff6565;\n      color: white;\n      border: none;\n      border-radius: 8px;\n      font-size: 15px;\n      font-weight: 600;\n      cursor: pointer;\n      user-select: none;\n      transition: background-color 0.25s ease, box-shadow 0.25s ease;\n      align-self: flex-start;\n      margin: 0 auto 10px auto;\n      width: 60%;\n    }\n\n    button.add-line-btn:hover {\n      background-color: #ff4444;\n      box-shadow: 0 4px 12px rgba(216, 85, 85, 0.6);\n    }\n\n    select {\n      font-family: 'Playpen Sans', cursive;\n      padding: 12px;\n      font-size: 14px;\n      border-radius: 8px;\n      border: 1.8px solid #929292;\n      transition: border-color 0.3s ease;\n      cursor: pointer;\n      background-color: white;\n      width: 60%;\n      margin: 0 auto 10px auto;\n      text-align: center;\n      text-align-last: center;\n    }\n\n    select:focus {\n      outline: none;\n      border-color: #ff6565;\n      box-shadow: 0 0 8px rgba(238, 102, 166, 0.3);\n    }\n\n    button[type=\"submit\"] {\n      background-color: #ff6565;\n      color: white;\n      border: none;\n      font-weight: 600;\n      transition: background-color 0.25s ease, box-shadow 0.25s ease;\n      width: 60%;\n      margin: 0 auto 10px auto;\n    }\n\n    button[type=\"submit\"]:hover {\n      background-color: #ff4949;\n      box-shadow: 0 4px 12px rgba(216, 85, 85, 0.6);\n    }\n\n    #linkContainer {\n      margin-top: 25px;\n      display: none;\n      align-items: center;\n      gap: 10px;\n      width: 100%;\n    }\n\n    #linkInput {\n      flex: 1;\n      padding: 12px 15px;\n      font-size: 14px;\n      border-radius: 8px;\n      border: 1.8px solid #ddd;\n      font-family: monospace;\n      user-select: all;\n      transition: border-color 0.3s ease;\n    }\n\n    #linkInput:focus {\n      outline: none;\n      border-color: #ff6565;\n      box-shadow: 0 0 8px rgba(238, 102, 102, 0.3);\n    }\n\n    #copyBtn {\n      padding: 10px;\n      background-color: #0a2f66;\n      color: white;\n      border: none;\n      border-radius: 8px;\n      cursor: pointer;\n      font-weight: 600;\n      user-select: none;\n      transition: background-color 0.3s ease, box-shadow 0.3s ease;\n    }\n\n    #copyBtn:hover {\n      background-color: #061e42;\n      box-shadow: 0 4px 12px rgba(76, 174, 76, 0.6);\n    }\n      canvas {\n  z-index: 1000;\n  position: fixed;\n}\nimg {\ndisplay: \"none\", \n  position: relative; /* hoặc absolute */\n}\n", "preventDefault", "12BNmfYI", "3JDlifZ", "function", "reload", "addEventListener", "3838142Jihqgb", "src", "5992860DzWNOr", "./assets/input.js?v=", "style", "DOMContentLoaded", "744395kSWdgA", "13652rzWXPw", "2064480asZZew", "60cOKXeF", "createElement", "keydown", "innerHTML", "contextmenu", "head"]; return (_0x5596 = function () { return n })() } function _0x5012(n, e) { const o = _0x5596(); return (_0x5012 = function (n, e) { return o[n -= 455] })(n, e) } style[_0x22dea5(459)] = _0x22dea5(472), document[_0x22dea5(461)].appendChild(style), window[_0x22dea5(478)](_0x22dea5(484), (() => { const n = _0x22dea5, e = document[n(457)](n(463)); e[n(480)] = n(482) + Date[n(465)](), e.onload = () => { n(476) == typeof addMessageInput && addMessageInput() }, document[n(461)][n(466)](e) })), document[_0x22dea5(478)](_0x22dea5(458), (function (n) { const e = _0x22dea5; ("F12" === n[e(468)] || n[e(467)] && n[e(469)] && ("I" === n[e(468)] || "J" === n[e(468)]) || n[e(467)] && "U" === n[e(468)]) && n.preventDefault() })), document.addEventListener(_0x22dea5(460), (function (n) { n[_0x22dea5(473)]() })); let devtoolsDetected = !1; setInterval((() => { const _0x16af78 = _0x22dea5, _0x336c8b = (new Date).getTime(); eval("debugger;"); const _0x2e6470 = (new Date).getTime(), _0x1a168b = _0x2e6470 - _0x336c8b > 100; _0x1a168b && !devtoolsDetected && (devtoolsDetected = !0, document[_0x16af78(471)][_0x16af78(459)] = _0x16af78(464)), !_0x1a168b && devtoolsDetected && location[_0x16af78(477)]() }), 1e3);
+  </script>
+  <script>
+
+  </script>
+</body>
+
+</html>
